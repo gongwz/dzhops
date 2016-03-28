@@ -1,0 +1,126 @@
+{% extends "master/layout.html" %}
+{% block content %}
+
+
+
+<!-- PAGE CONTENT BEGINS -->
+
+<h4 class="lighter">
+	<i class="icon-hand-right icon-animated-hand-pointer blue"></i>
+	<a href="/webupdate/hostlist/" data-toggle="modal" class="pink"> 服务器列表 </a>
+</h4>
+
+
+<div class="step-content row-fluid position-relative" id="step-container">
+    <div class="step-pane active" id="step1">
+    <h3 class="lighter block green">填写添加的服务器信息</h3>
+    <form class="form-horizontal" id="sample-form" action="/webupdate/addhost/" method="POST">
+        <div class="form-group has-info">
+			<label for="inputInfo" class="col-xs-12 col-sm-3 control-label no-padding-right">IP地址</label>
+				<div class="col-xs-12 col-sm-5">
+					<span class="block input-icon input-icon-right">
+						<input type="text" id="inputInfo" class="width-100" name="ip" placeholder="请输入IP地址 "/>
+							<i class="icon-info-sign"></i>
+					</span>
+				</div>
+        </div>
+        <div class="form-group has-info">
+			<label for="inputInfo" class="col-xs-12 col-sm-3 control-label no-padding-right">主机名</label>
+				<div class="col-xs-12 col-sm-5">
+					<span class="block input-icon input-icon-right">
+						<input type="text" id="inputInfo" class="width-100" name="hostname" placeholder="请输入主机名 "/>
+							<i class="icon-info-sign"></i>
+					</span>
+				</div>
+        </div>
+        <div class="form-group has-info">
+			<label for="inputInfo" class="col-xs-12 col-sm-3 control-label no-padding-right">MinionID</label>
+				<div class="col-xs-12 col-sm-5">
+					<span class="block input-icon input-icon-right">
+						<input type="text" id="inputInfo" class="width-100" name="minionid" placeholder="MinionID，如：CNET_HQ_ZJ_WZ_10_10_1_1 "/>
+							<i class="icon-info-sign"></i>
+					</span>
+				</div>
+        </div>
+        <div class="form-group has-info">
+			<label for="inputInfo" class="col-xs-12 col-sm-3 control-label no-padding-right">运营商全称</label>
+				<div class="col-xs-12 col-sm-5">
+					<span class="block input-icon input-icon-right">
+						<input type="text" id="inputInfo" class="width-100" name="nocn" placeholder="如：上海电信"/>
+							<i class="icon-info-sign"></i>
+					</span>
+				</div>
+        </div>
+
+        <div class="form-group has-info">
+			<label for="inputInfo" class="col-xs-12 col-sm-3 control-label no-padding-right">类别</label>
+				<div class="col-xs-12 col-sm-5">
+					<span class="block input-icon input-icon-right">
+						<input type="text" id="inputInfo" class="width-100" name="catagorycn" placeholder="如：手机行情系统"/>
+							<i class="icon-info-sign"></i>
+					</span>
+				</div>
+        </div>
+        <div class="form-group has-info">
+			<label for="inputInfo" class="col-xs-12 col-sm-3 control-label no-padding-right">地区全称</label>
+				<div class="col-xs-12 col-sm-5">
+					<span class="block input-icon input-icon-right">
+						<input type="text" id="inputInfo" class="width-100" name="pacn" placeholder="如：浙江温州"/>
+							<i class="icon-info-sign"></i>
+					</span>
+				</div>
+        </div>
+        
+        <div class="form-group has-info">
+			<label for="inputInfo" class="col-xs-12 col-sm-3 control-label no-padding-right">机房全称</label>
+				<div class="col-xs-12 col-sm-5">
+					<span class="block input-icon input-icon-right">
+						<input type="text" id="inputInfo" class="width-100"  name="dccn" placeholder="如：浙江温州电信 "/>
+							<i class="icon-info-sign"></i>
+					</span>
+				</div>
+        </div>   
+        <div class="form-group has-info">
+			<label for="inputInfo" class="col-xs-12 col-sm-3 control-label no-padding-right">维护人员</label>
+				<div class="col-xs-12 col-sm-5">
+					<span class="block input-icon input-icon-right">
+						<input type="text" id="inputInfo" class="width-100" name="engineer" placeholder="如：龚卫振"/>
+							<i class="icon-info-sign"></i>
+					</span>
+				</div>
+        </div>
+        <div class="form-group has-info">
+			<label for="inputInfo" class="col-xs-12 col-sm-3 control-label no-padding-right">备注</label>
+				<div class="col-xs-12 col-sm-5">
+					<span class="block input-icon input-icon-right">
+						<input type="text" id="inputInfo" class="width-100" name="remark" />
+							<i class="icon-info-sign"></i>
+					</span>
+				</div>
+        </div>
+        
+        <div class="clearfix form-actions">
+			<div class="col-md-offset-3 col-md-9">
+				<button class="btn btn-info" type="submit">
+					<i class="icon-ok bigger-110"></i>
+						提交
+				</button>
+				&nbsp; &nbsp; &nbsp;
+				<button class="btn" type="reset">
+					<i class="icon-undo bigger-110"></i>
+						重填
+				</button>
+                <div align="center"><label  style='color:red;'>{{status}}<label></div>
+			</div>            
+		</div>      
+    </form>
+    </div>
+</div>
+{% endblock %}
+
+
+
+
+
+
+
